@@ -1,0 +1,20 @@
+package yatraToAndFro;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
+public class TestYatra {
+	ChromeDriver driver;
+	private SelectingToandFroInFlight flight;
+	
+	@Test
+	public void selectTo() {
+		driver = new ChromeDriver();
+		flight = new SelectingToandFroInFlight(driver);
+		driver.get("https://www.yatra.com/");
+		flight.clickFlight();
+		flight.clickFlightTo();
+		flight.emptyToTest();
+		flight.clickonPune();
+		flight.closeTheAd();
+	}
+}

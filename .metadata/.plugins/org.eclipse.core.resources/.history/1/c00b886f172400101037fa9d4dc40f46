@@ -1,0 +1,26 @@
+package day2;
+class Test{
+	final String batchCode = "123";
+	final void print() {
+		System.out.println("Hello");
+	}
+}
+final class Student{
+	
+}
+//class StudentA extends Student{
+//	
+//}
+class TestA extends Test{
+	void print() {
+		System.out.println("Bye");
+	}
+}
+public class Program_Final {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test obj = new Test();
+		obj.print();
+	}
+}

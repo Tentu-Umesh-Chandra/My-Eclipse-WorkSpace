@@ -1,0 +1,21 @@
+package day2;
+class Employee{
+	int empId;
+	String empName;
+	String companyName;
+	void print() {
+		System.out.println(this.empId+" "+this.empName);
+	}
+	Employee(int empId, String empName){
+		this.empId = empId;
+		this.empName = empName;
+	}
+}
+public class Program2_Class {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Employee obj = new Employee(101,"Umesh");
+		obj.print();
+	}
+}

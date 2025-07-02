@@ -1,0 +1,25 @@
+package day2;
+class Rating{
+	int userId;
+	float rating;
+	String comment;
+}
+class BookRating extends Rating{
+
+	boolean doYouLike;
+}
+class GroceryRating extends Rating{
+	boolean isItFresh;
+}
+public class Program3_Inheritance {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		GroceryRating groceryRating = new GroceryRating();
+		groceryRating.userId = 101;
+		groceryRating.rating = 3.6f;
+		groceryRating.comment = "Need Free corriander";
+		groceryRating.isItFresh = true;
+	}
+
+}

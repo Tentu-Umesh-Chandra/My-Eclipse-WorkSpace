@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;interviewPrep.Program3_GarbageCollection&apos; to &apos;Program4_GarbageCollection&apos;&#x0D;&#x0A;- Original project: &apos;Java_practice&apos;&#x0D;&#x0A;- Original element: &apos;interviewPrep.Program3_GarbageCollection&apos;&#x0D;&#x0A;- Renamed element: &apos;interviewPrep.Program4_GarbageCollection&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Program3_GarbageCollection&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;interviewPrep{Program3_GarbageCollection.java[Program3_GarbageCollection" matchStrategy="1" name="Program4_GarbageCollection" qualified="false" references="true" similarDeclarations="false" stamp="1749462553531" textual="false" version="1.0"/>
+</session>

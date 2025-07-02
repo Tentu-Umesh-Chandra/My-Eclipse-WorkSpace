@@ -1,0 +1,52 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage2 {
+	private WebDriver driver;
+
+	public LoginPage2(WebDriver driver) {
+		super();
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	@FindBy(id="username")
+	WebElement userNameField;
+	@FindBy(id="password")
+	WebElement passwordField;
+	@FindBy(xpath="//button[@type='submit']")
+	WebElement buttonSubmitField;
+	@FindBy(id="message")
+	WebElement messageField;
+	
+	public void enterUserName(String userName) {
+		userNameField.sendKeys(userName);
+	}
+	public void enterPassword(String password) {
+		passwordField.sendKeys(password);
+	}
+	public void clickBtn() {
+		buttonSubmitField.click();
+	}
+	
+	public boolean isUserNameEnebled() {
+		return userNameField.isEnabled();
+	}
+	public boolean isPasswordEnabled() {
+		return passwordField.isEnabled();
+	}
+	public boolean isClickEnabled() {
+		return buttonSubmitField.isEnabled();
+	}
+	public boolean isMessageSuccess() {
+		return messageField.getText().equals("Welcome, Alex!");
+	}
+	public boolean isMessageFailure() {
+		return messageField.getText().equals("Invalid Credentials");
+	}
+}
