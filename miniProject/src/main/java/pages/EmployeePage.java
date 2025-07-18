@@ -189,13 +189,14 @@ public class EmployeePage {
     @FindBy(xpath = "(//input[@type='password'])[2]")
     WebElement confirmPasswordField;
     
-    @FindBy(css = "button[type='submit']")
-    WebElement saveButton;
+    //@FindBy(css = "button[type='submit']")
+    By saveButton = By.xpath("//button[@type='submit']");
+    
     
     @FindBy(linkText = "Employee List")
     WebElement employeeListTab;
     
-    @FindBy(xpath = "//*[contains(text(),'Amuneeb')]")
+    @FindBy(xpath = "//*[contains(text(),'muneeb')]")
     WebElement employeeRecord;
     
     @FindBy(xpath = "(//div[contains(@class,'oxd-select-text')])[1]")
@@ -225,19 +226,19 @@ public class EmployeePage {
     public void addEmployee(String firstName, String middleName, String lastName, String empId, String uname, String pwd) throws InterruptedException {
         pimTab.click();
         addEmployeeTab.click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         firstNameField.sendKeys(firstName);
         middleNameField.sendKeys(middleName);
         lastNameField.sendKeys(lastName);
         employeeIdField.clear();
-        Thread.sleep(1000);
+        //Thread.sleep(1000);
         employeeIdField.sendKeys(empId);
         loginDetailsToggle.click();
         usernameField.sendKeys(uname);
         passwordField.sendKeys(pwd);
         confirmPasswordField.sendKeys(pwd);
-        Thread.sleep(1000);
-        saveButton.click();
+        //Thread.sleep(1000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(saveButton)).click();
     }
     
     /*
@@ -259,17 +260,17 @@ public class EmployeePage {
           }
         }
         //employeeRecord.click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         nationalityDropdown.click();
         nationalityIndian.click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         genderMale.click();
-        Thread.sleep(2000);
+        //Thread.sleep(2000);
         maritalStatusDropdown.click();
         maritalStatusSingle.click();
-        Thread.sleep(2000);
-        saveButton.click();
-        Thread.sleep(4000);
+        //Thread.sleep(2000);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(saveButton)).click();
+        //Thread.sleep(4000);
     }
     
     /*
@@ -277,7 +278,7 @@ public class EmployeePage {
      */
     public void logout() throws InterruptedException {
         profileDropdown.click();
-        Thread.sleep(4000);
+        //Thread.sleep(4000);
         logoutLink.click();
     }
 }
