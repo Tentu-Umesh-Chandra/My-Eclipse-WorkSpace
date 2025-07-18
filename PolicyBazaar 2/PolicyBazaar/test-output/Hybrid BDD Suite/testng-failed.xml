@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Hybrid BDD Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Car Insurance(failed)">
+    <classes>
+      <class name="testcases.CarInsuranceTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="testCarInsuranceFlow"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.CarInsuranceTest -->
+    </classes>
+  </test> <!-- Car Insurance(failed) -->
+</suite> <!-- Failed suite [Hybrid BDD Suite] -->
